@@ -1,0 +1,60 @@
+// добавлять кусочок кода vars
+$accent:#FF6838;
+$default: #31352B;
+$title: #363853;
+$bg: #F9FAFF;
+
+
+%bold-700 {
+  font-family: 'Roboto-Bold',
+    sans-serif;
+  font-weight: 700;
+}
+
+%medium-500 {
+  font-family: 'Roboto-Medium',
+    sans-serif;
+  font-weight: 500;
+}
+
+%regular-400 {
+  font-family: 'Roboto-Regular',
+    sans-serif;
+  font-weight: 400;
+}
+
+%light-300 {
+  font-family: 'Roboto-Light',
+    sans-serif;
+  font-weight: 300;
+}
+
+%btn {
+  padding: 7px 16px;
+  color: #fff;
+  background-color: $accent;
+  border-radius: 6px;
+  @extend %regular-400;
+}
+
+%item {
+  border: 1px solid transparent;
+  transition: border-color 0.5s;
+
+  &:first-child {
+    margin: 0;
+  }
+
+  &:hover {
+    color: #FF6838;
+  }
+
+  &:focus {
+    border: 1px solid #FF6838;
+    border-radius: 5px;
+  }
+
+  &:active {
+    text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+  }
+}
