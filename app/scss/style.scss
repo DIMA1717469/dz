@@ -674,4 +674,38 @@
     display: flex;
     justify-content: space-between;
   }
+  &__images{
+    width: 440px;
+    height: 585px;
+    margin-left: 76px;
+    margin-top: -109px;
+  }
+  &__box1{
+    width: 509px;
+    height: 478px;
+    margin-top: -47px;
+  }
+  &__title{
+    font-size: 36px;
+    line-height: 130%;
+    color: $title;
+    @extend %medium-500;
+    margin-bottom: 30px;
+  }
+  &__text{
+    color: $default;
+    font-size: 20px;
+    line-height: 150%;
+    @extend %regular-400;
+    opacity: 0.9;
+    margin-bottom: 30px;
+  }
+  &__item{
+    font-size: 24px;
+    line-height: 150%;
+    color: $title;
+    @extend %regular-400;
+    margin-bottom: 20px;
+    padding-left: 65px;
+  }
 }
