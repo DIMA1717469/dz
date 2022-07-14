@@ -12,3 +12,658 @@
 
 // // писати код для css
 @import 'global';
+.header {
+  padding: 50px 0 60px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  display: block;
+  border: 1px solid transparent;
+  transition: border-color 0.5s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    border: 1px solid #FF6838;
+    border-radius: 5px;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.menu {
+  padding-left: 457px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__list-item {
+    display: block;
+    border: 1px solid transparent;
+    transition: border-color 0.5s;
+    margin-left: 43px;
+
+    &:first-child {
+      margin: 0;
+    }
+
+    &:hover {
+      color: #FF6838;
+    }
+
+    &:focus {
+      border: 1px solid #FF6838;
+      border-radius: 5px;
+    }
+
+    &:active {
+      text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+    }
+  }
+
+  &__list-item+&__list-item {
+    margin-left: 47px;
+  }
+
+  &__list-link {
+    color: $default;
+    transition: all .3s;
+    @extend %regular-400;
+
+    &:hover {
+      color: $accent;
+      @extend %medium-500;
+    }
+  }
+
+  &__list-link--active {
+    color: $accent;
+    @extend %medium-500;
+  }
+}
+
+.user-nav {
+  display: flex;
+  margin-right: -26px;
+  position: relative;
+
+  &__btn {
+    background-color: transparent;
+    margin-right: 22px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: border-color 0.5s;
+
+    &:hover {
+      background-color: #FF6838;
+      border-radius: 5px;
+
+      &.user-nav__btn--active {
+        ellipse {
+          stroke: #fff;
+        }
+
+        path {
+          stroke: #fff;
+        }
+      }
+    }
+
+    &:focus {
+      background-color: rgba(255, 122, 80, 0.1);
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+
+      &.user-nav__btn--active {
+        ellipse {
+          stroke: #363853;
+        }
+
+        path {
+          stroke: #363853;
+        }
+      }
+    }
+
+    &:active {
+      opacity: 0.5;
+      background: rgba(255, 122, 80, 0.1);
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $accent;
+    top: -4px;
+    right: -3px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+
+    &:hover {
+      background-color: #fff;
+      color: $accent;
+    }
+
+    &:focus {
+      background-color: $accent;
+      color: #fff;
+    }
+  }
+}
+
+.top-about {
+  padding-top: 154px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: inline-block;
+    max-width: 38%;
+    width: 100%;
+  }
+
+  &__title {
+    color: $title;
+    font-size: 66px;
+    line-height: 130%;
+    text-transform: uppercase;
+    @extend %bold-700;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+  }
+
+  &__subtitle {
+    color: $accent;
+    font-size: 66px;
+    line-height: 130%;
+    text-transform: uppercase;
+    @extend %bold-700;
+  }
+
+  &__text {
+    @extend %regular-400;
+    color: $default;
+    font-size: 20px;
+    line-height: 150%;
+    width: 450px;
+    margin-bottom: 19px;
+  }
+
+  &__btn {
+    background-color: $accent;
+    padding: 12px 30px;
+    margin-right: 35px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+
+    &:hover {
+      background-color: transparent;
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+
+    &:active {
+      color: #FF6838;
+      background: rgba(255, 122, 80, 0.1);
+    }
+
+    &:focus {
+      background-color: rgba(255, 122, 80, 0.1);
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+    }
+
+    &__link {
+      &:active {
+        color: #FF6838;
+      }
+
+      &:hover {
+        color: #FF6838;
+      }
+    }
+  }
+
+  &__link,
+  &__link-link {
+    color: #fff;
+    @extend %regular-400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+  }
+
+  &__link {
+    &:active {
+      color: #FF6838;
+    }
+
+    &:hover {
+      color: #FF6838;
+    }
+  }
+
+  &__link-link {
+    color: $title;
+    font-size: 20px;
+    line-height: 150%;
+    @extend %regular-400;
+    text-decoration-line: underline;
+    @extend %item;
+    background-color: transparent;
+  }
+}
+
+.top-about__img {
+  width: 560px;
+  line-height: 660px;
+  margin-top: -152px;
+  margin-right: -25px;
+}
+
+.product {
+  padding: 112px 0;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 30px;
+  }
+}
+
+.product-info {
+  margin-bottom: 57px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 61px;
+    margin-left: 39px;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  margin-bottom: 52px;
+
+  &__item {
+    border: 1px solid transparent;
+  }
+
+  &__btn {
+    display: flex;
+    padding: 22px;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 1px #ececec;
+    border-radius: 11px;
+    padding: 10px 41px 13px 28px;
+    @extend %item;
+    @extend %regular-400;
+    cursor: pointer;
+
+    &:hover {
+      background-color: transparent;
+      -webkit-box-shadow: 0px 0px 0px 2px rgb(255 104 56 / 70%);
+      box-shadow: 0px 0px 0px 2px rgb(255 104 56 / 70%);
+      background: rgba(255, 122, 80, 0.1);
+      border-radius: 5px;
+
+      &.info__btn--summer {
+        path {
+          fill: $accent;
+        }
+      }
+    }
+
+    &:active {
+      background: #FFFFFF;
+      box-shadow: inset 0px -5px 12px rgba(255, 104, 56, 0.2);
+      border-radius: 5px;
+    }
+
+    &:focus {
+      border: 1px solid #FF6838;
+      border-radius: 5px;
+      box-shadow: 0px 0px 0px 2px rgb(255 104 56 / 70%);
+    }
+  }
+
+  &__list-link {
+    padding-left: 11px;
+  }
+
+  &__item-text {
+    font-size: 20px;
+    line-height: 130%;
+    color: #363853;
+    @extend %regular-400;
+    padding-top: 10px;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+}
+
+.product-item {
+  width: 210px;
+  background-color: #fff;
+  box-shadow: 0px 0px 0px 1px #ECECEC;
+  border-radius: 5px;
+
+  &:hover {
+    box-shadow: 0px 0px 0px 2px rgb(255 104 56 / 70%);
+    border-radius: 5px;
+  }
+
+  &__img-box {
+    max-width: 210px;
+    min-height: 300px;
+  }
+
+  &__images {
+    padding: 11px 35px 10px;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    @extend %regular-400;
+    color: $default;
+    // margin-bottom: 10px;
+    padding: 0 15px;
+  }
+
+  &__new-price {
+    color: $title;
+    font-size: 15px;
+    line-height: 140%;
+    @extend %medium-500;
+    padding: 10px 70px;
+    margin-bottom: 7px;
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 130%;
+    @extend %btn;
+    margin: 54px;
+  }
+
+  &__link-link {
+    display: block;
+    text-align: center;
+    @extend %regular-400;
+  }
+}
+
+.product__text-box {
+  padding: 4px 5px 15px;
+}
+
+
+.footer {
+  padding: 120px 0 51px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+
+  &__item-box {
+    width: 200px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__item-link:last-child {
+    margin-bottom: 0;
+  }
+
+  &__item-item {
+    width: 91px;
+  }
+
+  &__item-boxs {
+    width: 181px;
+  }
+
+  &__item-box-a {
+    width: 227px;
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &__forms {
+    margin-bottom: 12px;
+  }
+
+  &__input {
+    background-color: #FFFFFF;
+    border: 1px solid #C2C2C2;
+    border-radius: 5px;
+    max-width: 200px;
+    height: 44px;
+    padding: 12px 10px 12px 15px;
+
+    &:focus {
+      box-shadow: 0px 0px 0px 2px rgb(255 104 56 / 70%);
+    }
+  }
+
+  &__input::placeholder {
+    font-size: 14px;
+    line-height: 130%;
+    color: #C2C2C2;
+    opacity: 0.9;
+    @extend %regular-400;
+  }
+
+  &__input:hover::placeholder {
+    color: $default;
+  }
+
+  &__button {
+    display: flex;
+    background-color: #FF6838;
+    padding: 11px 41px;
+    margin-right: 35px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &__button {
+    &:hover {
+      background-color: transparent;
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      border-radius: 5px;
+
+      &.footer-top__button--active {
+        path {
+          fill: #FF6838
+        }
+      }
+    }
+
+    &:active {
+      color: #FF6838;
+      background-color: rgba(255, 122, 80, 0.1);
+
+      &.footer-top__button--active {
+        path {
+          fill: #FF6838
+        }
+      }
+    }
+
+    &:focus {
+      color: #FF6838;
+      box-shadow: 0px 0px 0px 2px rgb(255 104 56 / 70%);
+      background-color: rgba(255, 122, 80, 0.1);
+      border-radius: 5px;
+
+      &.footer-top__button--active {
+        path {
+          fill: #FF6838
+        }
+      }
+    }
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 14px;
+    @extend %medium-500;
+    line-height: 130%;
+    margin-left: 15px;
+
+    &:hover {
+      color: #FF6838;
+    }
+  }
+
+  &__item {
+    margin-right: 70px;
+  }
+
+  &__item-link {
+    display: block;
+    font-size: 18px;
+    line-height: 130%;
+    width: 127%;
+    color: $default;
+    @extend %regular-400;
+    margin-bottom: 20px;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+  }
+
+  &__adress {
+    display: block;
+    font-size: 16px;
+    line-height: 32px;
+    margin-bottom: 12px;
+  }
+
+  &__phope {
+    display: block;
+    font-size: 16px;
+    line-height: 32px;
+    margin-bottom: 8px
+  }
+
+  &__email {
+    display: block;
+    font-size: 16px;
+    line-height: 32px;
+    margin-bottom: 15px;
+  }
+
+  &__facebook {
+    margin-left: -11px;
+  }
+
+  &__box-facebook {
+    background-color: transparent;
+    border: 1px solid transparent;
+
+    // margin-right: 8px;
+    &:hover {
+      circle {
+        fill: $accent;
+      }
+
+      path {
+        fill: #fff;
+      }
+    }
+
+    &:active {
+      circle {
+        fill: rgba(255, 122, 80, 0.1);
+      }
+
+      path {
+        fill: $accent;
+      }
+    }
+
+    &:focus {
+      circle {
+        fill: rgba(255, 122, 80, 0.1);
+      }
+
+      svg {
+        background: rgba(255, 122, 80, 0.1);
+        box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+        border-radius: 22px;
+      }
+
+      path {
+        fill: $default;
+      }
+    }
+  }
+
+  &__text-data {
+    text-align: center;
+  }
+
+  &__inner {
+    padding: 30px 0;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: #C2C2C2;
+      width: 100%;
+      height: 1px;
+      left: 0;
+      top: 0px;
+      z-index: -1;
+      opacity: 0.2;
+    }
+  }
+
+  &__text-text {
+    color: $default;
+    font-size: 14px;
+    line-height: 100%;
+    @extend %regular-400;
+  }
+}
