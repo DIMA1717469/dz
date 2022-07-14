@@ -9,6 +9,7 @@
   "license": "ISC",
   "devDependencies": {
     "@fancyapps/ui": "^4.0.27",
+    "autoprefixer": "^10.4.7",
     "browser-sync": "^2.27.9",
     "fancybox": "^3.0.1",
     "gulp": "^4.0.2",

@@ -27,7 +27,7 @@ function name(params) {
 function browsersync() {
   browserSync.init({
     server: {
-      baseDir: 'app/'
+      baseDir: '.'
     },
     notify: false
   })
