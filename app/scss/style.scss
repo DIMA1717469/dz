@@ -12,6 +12,7 @@
 
 // // писати код для css
 @import 'global';
+
 .header {
   padding: 50px 0 60px;
 
@@ -668,31 +669,44 @@
   }
 }
 
-.fast-delivery{
+.fast-delivery {
   padding: 120px 0;
-  &__inner{
+
+  &__inner {
     display: flex;
     justify-content: space-between;
   }
-  &__images{
+
+  &__images {
     width: 440px;
     height: 585px;
     margin-left: 76px;
     margin-top: -109px;
   }
-  &__box1{
+
+  &__box1 {
     width: 509px;
     height: 478px;
     margin-top: -47px;
   }
-  &__title{
+
+  &__title {
     font-size: 36px;
     line-height: 130%;
     color: $title;
     @extend %medium-500;
     margin-bottom: 30px;
   }
-  &__text{
+
+  &__subtitle {
+    display: block;
+    font-size: 36px;
+    line-height: 130%;
+    color: $title;
+    @extend %medium-500;
+  }
+
+  &__text {
     color: $default;
     font-size: 20px;
     line-height: 150%;
@@ -701,10 +715,12 @@
     margin-bottom: 30px;
     max-width: 85%;
   }
-  &__list{
+
+  &__list {
     margin-bottom: 28px;
   }
-  &__item{
+
+  &__item {
     font-size: 24px;
     line-height: 150%;
     color: $title;
@@ -712,7 +728,8 @@
     margin-bottom: 20px;
     padding-left: 65px;
     position: relative;
-    &::before{
+
+    &::before {
       content: "";
       position: absolute;
       top: -1px;
@@ -727,23 +744,195 @@
 }
 
 .fast-delivery__item--timer::before {
-      background-image: url('../images/icons/timer.svg');
-    }
-    .fast-delivery__item--delivery::before{
-      background-image: url('../images/icons/delivery.svg');
-    }
-     .fast-delivery__item--resturent::before {
-       background-image: url('../images/icons/resturent.svg');
-     }
+  background-image: url('../images/icons/timer.svg');
+}
+
+.fast-delivery__item--delivery::before {
+  background-image: url('../images/icons/delivery.svg');
+}
+
+.fast-delivery__item--resturent::before {
+  background-image: url('../images/icons/resturent.svg');
+}
 
 
-     .the{
-      padding: 0 0 120px;
-      &__title{
-        font-size: 36px;
-        line-height: 130%;
-        text-align: center;
-        color: $title;
-        @extend %medium-500;
-      }
+.the {
+  padding: 0 0 120px;
+
+  &__title {
+    font-size: 36px;
+    line-height: 130%;
+    text-align: center;
+    color: $title;
+    @extend %medium-500;
+    margin-bottom: 45px;
+  }
+  &__items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+
+  &__item {
+    background-color: #fff;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 370px;
+  }
+
+  &__box {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    font-size: 24px;
+    line-height: 130%;
+    color: $default;
+    @extend %regular-400;
+    margin-bottom: 23px;
+    padding-left: 20px;
+  }
+
+  &__box1 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__new-price {
+    color: $default;
+    font-size: 18px;
+    line-height: 130%;
+    @extend %light-300;
+    opacity: 0.9;
+    padding-left: 52px;
+    position: relative;
+     &::before {
+       content: "";
+       position: absolute;
+       top: 0px;
+       left: 21px;
+       width: 22px;
+       height: 22px;
+       background-repeat: no-repeat;
+       background-position: center;
+       background-size: cover;
      }
+  }
+
+  &__btn {
+    background-color: #FF6838;
+    padding: 2px 27px;
+    margin-right: 23px;
+    border-radius: 20px;
+    border: none;
+    height: 28px;
+    margin-right: 22px;
+    margin-bottom: 23px;
+    cursor: pointer;
+     &:hover {
+       background-color: transparent;
+       box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+       border-radius: 20px;
+
+       &.footer-top__button--active {
+         path {
+           fill: #FF6838
+         }
+         svg{
+            margin: 0px -19px 0px 19px;
+         }
+       }
+       
+     }
+
+     &:active {
+       color: #FF6838;
+       background-color: rgba(255, 122, 80, 0.1);
+
+       &.footer-top__button--active {
+          path {
+           fill: #FF6838;
+         }
+       }
+     }
+
+     &:focus {
+       color: #FF6838;
+       box-shadow: 0px 0px 0px 2px rgb(255 104 56 / 70%);
+       background-color: rgba(255, 122, 80, 0.1);
+       border-radius: 20px;
+
+       &.footer-top__button--active {
+         path {
+           fill: #FF6838
+         }
+       }
+     }
+  }
+}
+.the__new-price--timer::before{
+  background-image: url('../images/menu/timer.svg');
+}
+.slider-blog {
+  padding: 0 0 120px;
+  &__wrapper{
+    max-width: 990px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  &__title{
+    font-size: 36px;
+    line-height: 130%;
+    text-align: center;
+    color: #363853;
+    margin-bottom: 45px;
+  }
+  &__inner{
+    display: flex;
+  }
+  &__images{
+    border-radius: 50%;
+    margin-bottom: 51px;
+  }
+  &__list{
+    margin-left: 40px;
+  }
+  &__quote {
+    font-size: 20px;
+    line-height: 150%;
+    color: $default;
+    @extend %light-300;
+    padding-left: 38px;
+    padding-right: 19px;
+    margin: 28px 37px 28px 0px;
+  }
+  &__name{
+    font-size: 20px;
+    line-height: 130%;
+    color: $accent;
+    @extend %medium-500;
+    padding-left: 37px;
+    margin-bottom: 19px;
+  }
+  &__text{
+    font-size: 14px;
+    line-height: 130%;
+    color: $default;
+    @extend %regular-400;
+    padding-left: 38px;
+    margin-bottom: 78px;
+  }
+  &__button{
+    background-color: transparent;
+    transform: translateY(-9%);
+    position: absolute;
+    cursor: pointer;
+    border: none;
+  }
+}
+.slick-prev{
+  left: 871px;
+}
+.slick-arrow{
+  right: 842px;
+}

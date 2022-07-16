@@ -4,7 +4,7 @@
   font-weight: 700;
 }
 
-.the__title, .fast-delivery__title, .footer-top__text, .product-item__new-price, .menu__list-link--active, .menu__list-link:hover {
+.slider-blog__name, .the__title, .fast-delivery__subtitle, .fast-delivery__title, .footer-top__text, .product-item__new-price, .menu__list-link--active, .menu__list-link:hover {
   font-family: "Roboto-Medium", sans-serif;
   font-weight: 500;
 }
@@ -19,9 +19,14 @@
   font-weight: 400;
 }
 
-.fast-delivery__item, .fast-delivery__text, .footer-top__text-text, .footer-top__item-link, .footer-top__input::placeholder, .product-item__link-link, .product-item__text, .info__item-text, .info__btn, .top-about__link, .top-about__link-link, .top-about__text, .menu__list-link, a, body, .product-item__link {
+.slider-blog__text, .the__text, .fast-delivery__item, .fast-delivery__text, .footer-top__text-text, .footer-top__item-link, .footer-top__input::placeholder, .product-item__link-link, .product-item__text, .info__item-text, .info__btn, .top-about__link, .top-about__link-link, .top-about__text, .menu__list-link, a, body, .product-item__link {
   font-family: "Roboto-Regular", sans-serif;
   font-weight: 400;
+}
+
+.slider-blog__quote, .the__new-price {
+  font-family: "Roboto-Light", sans-serif;
+  font-weight: 300;
 }
 
 .product-item__link {
@@ -3163,6 +3168,12 @@ a {
   color: #363853;
   margin-bottom: 30px;
 }
+.fast-delivery__subtitle {
+  display: block;
+  font-size: 36px;
+  line-height: 130%;
+  color: #363853;
+}
 .fast-delivery__text {
   color: #31352B;
   font-size: 20px;
@@ -3214,4 +3225,154 @@ a {
   line-height: 130%;
   text-align: center;
   color: #363853;
+  margin-bottom: 45px;
+}
+.the__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+.the__item {
+  background-color: #fff;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 370px;
+}
+.the__box {
+  margin-bottom: 15px;
+}
+.the__text {
+  font-size: 24px;
+  line-height: 130%;
+  color: #31352B;
+  margin-bottom: 23px;
+  padding-left: 20px;
+}
+.the__box1 {
+  display: flex;
+  justify-content: space-between;
+}
+.the__new-price {
+  color: #31352B;
+  font-size: 18px;
+  line-height: 130%;
+  opacity: 0.9;
+  padding-left: 52px;
+  position: relative;
+}
+.the__new-price::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 21px;
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.the__btn {
+  background-color: #FF6838;
+  padding: 2px 27px;
+  margin-right: 23px;
+  border-radius: 20px;
+  border: none;
+  height: 28px;
+  margin-right: 22px;
+  margin-bottom: 23px;
+  cursor: pointer;
+}
+.the__btn:hover {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+  border-radius: 20px;
+}
+.the__btn:hover.footer-top__button--active path {
+  fill: #FF6838;
+}
+.the__btn:hover.footer-top__button--active svg {
+  margin: 0px -19px 0px 19px;
+}
+.the__btn:active {
+  color: #FF6838;
+  background-color: rgba(255, 122, 80, 0.1);
+}
+.the__btn:active.footer-top__button--active path {
+  fill: #FF6838;
+}
+.the__btn:focus {
+  color: #FF6838;
+  box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+  background-color: rgba(255, 122, 80, 0.1);
+  border-radius: 20px;
+}
+.the__btn:focus.footer-top__button--active path {
+  fill: #FF6838;
+}
+
+.the__new-price--timer::before {
+  background-image: url("../images/menu/timer.svg");
+}
+
+.slider-blog {
+  padding: 0 0 120px;
+}
+.slider-blog__wrapper {
+  max-width: 990px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.slider-blog__title {
+  font-size: 36px;
+  line-height: 130%;
+  text-align: center;
+  color: #363853;
+  margin-bottom: 45px;
+}
+.slider-blog__inner {
+  display: flex;
+}
+.slider-blog__images {
+  border-radius: 50%;
+  margin-bottom: 51px;
+}
+.slider-blog__list {
+  margin-left: 40px;
+}
+.slider-blog__quote {
+  font-size: 20px;
+  line-height: 150%;
+  color: #31352B;
+  padding-left: 38px;
+  padding-right: 19px;
+  margin: 28px 37px 28px 0px;
+}
+.slider-blog__name {
+  font-size: 20px;
+  line-height: 130%;
+  color: #FF6838;
+  padding-left: 37px;
+  margin-bottom: 19px;
+}
+.slider-blog__text {
+  font-size: 14px;
+  line-height: 130%;
+  color: #31352B;
+  padding-left: 38px;
+  margin-bottom: 78px;
+}
+.slider-blog__button {
+  background-color: transparent;
+  transform: translateY(-9%);
+  position: absolute;
+  cursor: pointer;
+  border: none;
+}
+
+.slick-prev {
+  left: 871px;
+}
+
+.slick-arrow {
+  right: 842px;
 }/*# sourceMappingURL=style.css.map */
