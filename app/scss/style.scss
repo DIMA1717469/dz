@@ -289,7 +289,7 @@
 }
 
 .product {
-  padding: 112px 0;
+  padding: 115px 0;
 
   &__items {
     display: grid;
@@ -879,6 +879,7 @@
     max-width: 990px;
     margin: 0 auto;
     padding: 0 15px;
+    position: relative;
   }
   &__title{
     font-size: 36px;
@@ -887,12 +888,10 @@
     color: #363853;
     margin-bottom: 45px;
   }
-  &__inner{
-    display: flex;
-  }
   &__images{
     border-radius: 50%;
     margin-bottom: 51px;
+    padding-left: 5px;
   }
   &__list{
     margin-left: 40px;
@@ -903,8 +902,33 @@
     color: $default;
     @extend %light-300;
     padding-left: 38px;
-    padding-right: 19px;
-    margin: 28px 37px 28px 0px;
+    padding-right: 38px;
+    margin: 28px 0px 28px 0px;
+    position: relative;
+    &::after{
+    content: "";
+    position: absolute;
+    background-image: url('../images/slider/“.svg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 24px;
+    height: 19px;
+    top: 5px;
+    left: 0;
+    }
+    &::before{
+      content: "";
+      position: absolute;
+      background-image: url('../images/slider/“1.svg');
+      background-position: left;
+      background-repeat: no-repeat;
+      background-size: auto;
+      width: 24px;
+      height: 19px;
+      right: 0;
+      bottom: 0;
+    }
   }
   &__name{
     font-size: 20px;
@@ -922,17 +946,151 @@
     padding-left: 38px;
     margin-bottom: 78px;
   }
-  &__button{
-    background-color: transparent;
-    transform: translateY(-9%);
-    position: absolute;
-    cursor: pointer;
-    border: none;
-  }
+}
+
+.slick-slide,
+.slider-blog__inner {
+  display: flex;
+}
+.slick-prev,
+.slick-arrow{
+  background-color: transparent;
+  padding: 0;
+   transform: translateY(-9%);
+  position: absolute;
+  cursor: pointer;
+  top: 94%;
+   border: none;
 }
 .slick-prev{
-  left: 871px;
+  left: 585px;
 }
 .slick-arrow{
-  right: 842px;
+  right: 548px;
 }
+.slick-dots{
+  display: flex;
+  justify-content: center;
+  margin-left: 44px;
+}
+.slick-dots button {
+  background-color: #242121;
+  opacity: 0.4;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  font-size: 0;
+  padding: 0;
+  border: none;
+  margin-right: 15px;
+}
+.slick-dots.slick-active button {
+  opacity: 1;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  font-size: 0;
+  padding: 0;
+  border: none;
+  margin-right: 15px;
+}
+.slick-dots button {
+  &:active{
+    background-color: $accent;
+  }
+   &:hover{
+    background-color: #FFF2ED;
+    box-shadow: 0px 0px 0px 2px rgb(255 104 56 / 70%);
+    border-radius: 19px;
+  }
+  &:focus {
+    background-color: #C2C2C2;
+    box-shadow: 0px 0px 0px 2px #ff6838;
+    border-radius: 19px;
+  }
+}
+.slick-dots .slick-active button {
+  opacity: 1;
+  width: 15px;
+  height: 15px;
+  background-color: #FF6838;
+  transform: translateY(0px);
+}
+.slick-next, .slick-arrow {
+  // border: 1px solid transparent;
+  &:hover{
+    circle{
+    stroke: $accent;
+    }
+    svg{
+      background-color: #FFF2ED;
+      border: 1px solid #FFF2ED;
+      border-radius: 50%;
+    }
+    path{
+      fill:$accent;
+    }
+  }
+   &:active {
+     circle {
+       stroke: none;
+     }
+
+     svg {
+       background-color: #FFF2ED;
+       border: 1px solid #FFF2ED;
+       border-radius: 50%;
+     }
+
+     path {
+       fill: $accent;
+     }
+   }
+    &:focus {
+      svg {
+        // background-color: #FFF2ED;
+        // border: 1px solid #FFF2ED;
+        box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+        border-radius: 50%;
+      }
+    }
+}
+.addition{
+  padding: 123px 0 0px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__inner-box{
+    max-width: 570px;
+  }
+  &__title{
+    width: 99%;
+    font-size: 36px;
+    line-height: 130%;
+    color: $title;
+    @extend %medium-500;
+    margin-bottom: 45px;
+    margin-top: -70px;
+  }
+  &__text{
+    width: 89%;
+    font-size: 20px;
+    line-height: 150%;
+    color: $default;
+    @extend %regular-400;
+    opacity: 0.9;
+    margin-bottom: 30px;
+  }
+  &__images-img{
+    display: flex;
+  }
+  &__images{
+    margin-right: 30px;;
+  }
+  &__inner-box1{
+    margin-top: -112px;
+    margin-right: -34px;
+  }
+}
+
