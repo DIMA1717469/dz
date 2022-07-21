@@ -21,7 +21,13 @@ $(function() {
       },
     ]
   });
-
+  
+  $('.menu__btn,.menu a,footer-top,.footer-top__item a').on('click', function () {
+    $('.menu__btn,.menu__list,.footer-top__item').toggleClass('menu__list--active')
+  }); 
+  // $('.menu__btn,.footer-top,.footer-top__item a').on('click', function () {
+  //   $('.menu__btn,.footer-top__item ').toggleClass('menu__list--active')
+  // }); 
 
   var mixer = mixitup('.product__items');
 });
