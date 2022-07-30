@@ -93,6 +93,9 @@
     @extend %medium-500;
   }
 }
+.menu__btn{
+  display: none;
+}
 
 .user-nav {
   display: flex;
@@ -423,6 +426,7 @@
     display: block;
     text-align: center;
     @extend %regular-400;
+    margin: 0 auto;
   }
 }
 
@@ -437,12 +441,15 @@
 
 .footer-top {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
 
   &__item-box {
     width: 200px;
   }
-
+  &__item-item1{
+    display: flex;
+    flex-wrap: wrap;
+  }
   &__item:last-child {
     margin-right: 0;
   }
@@ -1093,5 +1100,19 @@
     margin-right: -34px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //медія запроси для телефонів 
 @import 'media';
