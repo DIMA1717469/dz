@@ -38,7 +38,7 @@ $(function() {
     // appendArrows: $('.slider-blog__title')
     // appendDots: $('')
   });
- 
+
   
   $('.menu__btn,.menu a,.item11 a').on('click', function () {
     $('.menu__btn,.menu__list,.item11').toggleClass('menu__list--active')

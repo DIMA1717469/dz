@@ -19,7 +19,7 @@
   font-weight: 400;
 }
 
-.addition__text, .slider-blog__text, .the__text, .fast-delivery__item, .fast-delivery__text, .footer-top__text-text, .footer-top__item-link, .footer-top__input::placeholder, .product-item__link-link, .product-item__text, .info__item-text, .info__btn, .top-about__link, .top-about__link-link, .top-about__text, .menu__list-link, a, body, .product-item__link {
+.shop-content .shop__title, .addition__text, .slider-blog__text, .the__text, .fast-delivery__item, .fast-delivery__text, .footer-top__text-text, .footer-top__item-link, .footer-top__input::placeholder, .product-item__link-link, .product-item__text, .info__item-text, .info__btn, .top-about__link, .top-about__link-link, .top-about__text, .menu__list-link, a, body, .product-item__link {
   font-family: "Roboto-Regular", sans-serif;
   font-weight: 400;
 }
@@ -3535,6 +3535,88 @@ a {
 .addition__inner-box1 {
   margin-top: -112px;
   margin-right: -34px;
+}
+
+.blog {
+  padding: 19px 0 24px;
+  background-color: rgba(255, 122, 80, 0.1);
+}
+
+.blog-menu {
+  padding-left: 0px;
+  height: 46px;
+  padding-top: 10px;
+}
+.blog-menu__list {
+  display: flex;
+}
+.blog-menu__list-item {
+  padding-right: 17px;
+}
+.blog-menu__list-link--active {
+  position: relative;
+}
+.blog-menu__list-link--active::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/icons/chevron.svg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 10px;
+  height: 24px;
+  left: 62px;
+}
+.blog-menu__list-link {
+  font-size: 14px;
+  line-height: 120%;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: #505050;
+}
+
+.shop-content {
+  padding: 60px 0 60px;
+}
+.shop-content__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.shop-content__filter-form {
+  width: 256px;
+}
+.shop-content__filter-sort:hover {
+  border: 1px solid #FF6838;
+  border-radius: 3px;
+}
+.shop-content__filter-sort:focus {
+  border: 1px solid #FF6838;
+  border-radius: 3px;
+}
+.shop-content__filter-sort {
+  width: 149px;
+  height: 47px;
+  margin-right: 8px;
+}
+.shop-content__filter-chow {
+  width: 92px;
+  height: 47px;
+}
+.shop-content .shop__title {
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  color: #363853;
+}
+
+select:hover {
+  color: #FF6838;
+}
+
+select:focus {
+  color: #31352B;
 }
 
 @media (max-width: 1248px) {
