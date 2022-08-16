@@ -58,3 +58,10 @@ $bg: #F9FAFF;
     text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
   }
 }
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numders});
+}
