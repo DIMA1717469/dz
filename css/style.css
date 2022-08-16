@@ -19,7 +19,7 @@
   font-weight: 400;
 }
 
-.shop-content .shop__title, .addition__text, .slider-blog__text, .the__text, .fast-delivery__item, .fast-delivery__text, .footer-top__text-text, .footer-top__item-link, .footer-top__input::placeholder, .product-item__link-link, .product-item__text, .info__item-text, .info__btn, .top-about__link, .top-about__link-link, .top-about__text, .menu__list-link, a, body, .product-item__link {
+.filter-size__text, .shop__list, .shop__title, .addition__text, .slider-blog__text, .the__text, .fast-delivery__item, .fast-delivery__text, .footer-top__text-text, .footer-top__item-link, .footer-top__input::placeholder, .product-item__link-link, .product-item__text, .info__item-text, .info__btn, .top-about__link, .top-about__link-link, .top-about__text, .menu__list-link, a, body, .product-item__link {
   font-family: "Roboto-Regular", sans-serif;
   font-weight: 400;
 }
@@ -3473,29 +3473,36 @@ a {
   transform: translateY(0px);
 }
 
-.slick-next:hover circle, .slick-arrow:hover circle {
+.slick-next:hover circle,
+.slick-arrow:hover circle {
   stroke: #FF6838;
 }
-.slick-next:hover svg, .slick-arrow:hover svg {
+.slick-next:hover svg,
+.slick-arrow:hover svg {
   background-color: #FFF2ED;
   border: 1px solid #FFF2ED;
   border-radius: 50%;
 }
-.slick-next:hover path, .slick-arrow:hover path {
+.slick-next:hover path,
+.slick-arrow:hover path {
   fill: #FF6838;
 }
-.slick-next:active circle, .slick-arrow:active circle {
+.slick-next:active circle,
+.slick-arrow:active circle {
   stroke: none;
 }
-.slick-next:active svg, .slick-arrow:active svg {
+.slick-next:active svg,
+.slick-arrow:active svg {
   background-color: #FFF2ED;
   border: 1px solid #FFF2ED;
   border-radius: 50%;
 }
-.slick-next:active path, .slick-arrow:active path {
+.slick-next:active path,
+.slick-arrow:active path {
   fill: #FF6838;
 }
-.slick-next:focus svg, .slick-arrow:focus svg {
+.slick-next:focus svg,
+.slick-arrow:focus svg {
   box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
   border-radius: 50%;
 }
@@ -3544,8 +3551,6 @@ a {
 
 .blog-menu {
   padding-left: 0px;
-  height: 46px;
-  padding-top: 10px;
 }
 .blog-menu__list {
   display: flex;
@@ -3559,7 +3564,7 @@ a {
 .blog-menu__list-link--active::after {
   content: "";
   position: absolute;
-  background-image: url(../images/icons/chevron.svg);
+  background-image: url("../images/icons/chevron.svg");
   background-position: left;
   background-repeat: no-repeat;
   background-size: auto;
@@ -3582,7 +3587,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 71px;
 }
 .shop-content__filter-form {
   width: 256px;
@@ -3604,12 +3609,6 @@ a {
   width: 92px;
   height: 47px;
 }
-.shop-content .shop__title {
-  font-size: 24px;
-  line-height: 120%;
-  letter-spacing: 0.03em;
-  color: #363853;
-}
 
 select:hover {
   color: #FF6838;
@@ -3617,6 +3616,94 @@ select:hover {
 
 select:focus {
   color: #31352B;
+}
+
+.shop__title {
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  color: #363853;
+  border-bottom: 1px solid #ececec;
+  padding-bottom: 15px;
+}
+.shop__list {
+  font-size: 18px;
+  line-height: 130%;
+  color: #31352B;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+.shop__link:hover {
+  color: #FF6838;
+}
+.shop__link:focus {
+  border: 1px solid #FF6838;
+  border-radius: 5px;
+}
+.shop__link:active {
+  text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
+}
+.shop__list:first-child {
+  margin-top: 21px;
+}
+
+.filter__item {
+  max-width: 270px;
+  height: 377px;
+  padding: 5px 12px 19px;
+  background-color: #fff;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.filter-price {
+  height: 205px;
+}
+
+.filter-size__label {
+  padding-left: 36px;
+  margin-bottom: 15px;
+  display: block;
+}
+.filter-size__input {
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  clip: rect(auto, 0, auto, 0);
+  position: absolute;
+}
+.filter-size__input:checked + .filter-size__checkbox {
+  background-image: url(../images/icons/checkbox.svg);
+  border: none;
+}
+.filter-size__checkbox {
+  width: 24px;
+  height: 24px;
+  background-color: #FAEDED;
+  border-radius: 3px;
+  position: absolute;
+  margin-left: -35px;
+  margin-top: -2px;
+}
+.filter-size__checkbox + .filter-size__text:hover {
+  color: #FF6838;
+}
+.filter-size__checkbox + .filter-size__text:focus {
+  color: #31352B;
+}
+.filter-size__checkbox:hover {
+  border: 1px solid #FF6838;
+}
+.filter-size__text {
+  font-size: 18px;
+  line-height: 120%;
+  align-items: center;
+  color: #31352B;
+  letter-spacing: 0.03em;
+}
+.filter-size__label:first-child {
+  margin-top: 23px;
 }
 
 @media (max-width: 1248px) {
