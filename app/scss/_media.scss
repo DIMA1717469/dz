@@ -1,13 +1,13 @@
 @media (max-width: 1248px){
+  .menu{
+  padding-left: 258px;
+}
      .user-nav{
     margin-right: 0px;
   }
   .menu__link {
     display: flex;
   }
-}
-.menu{
-  padding-left: 258px;
 }
 @media (max-width: 1000px){
   .menu {
@@ -16,7 +16,7 @@
 }
 @media (max-width: 751px){ 
   .header{
-    padding: 25px 0 25px;
+    padding: 25px 0 17px;
   }
   .header::after {
     border: 1px solid #EEEFF3;
@@ -71,8 +71,8 @@
     content: "";
     position: absolute;
     width: 80%;
-    height: 1px;
-    background-color: rgb(230, 17, 17);
+    height: 2px;
+    background-color: #363853;
     left: 0;
     transition-duration: 0.3s;
   }
@@ -88,8 +88,8 @@
   .menu__btn span {
     position: absolute;
     width: 80%;
-    height: 1px;
-    background-color: rgb(222, 17, 44);
+    height: 2px;
+    background-color: #363853;
     left: 0;
     top: 16px;
     transition-duration: 0.3s;
@@ -189,7 +189,8 @@
     .footer-top__item-box-a {
       width: 95%;
     }
------------------------------------------------------------
+
+
   .user-nav {
     margin-right: 100px;
   }
@@ -557,4 +558,5 @@
     margin-bottom: 21px;
     order: -1;
   }
+
  }

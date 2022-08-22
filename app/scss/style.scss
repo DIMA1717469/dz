@@ -43,7 +43,7 @@
 }
 
 .menu {
-  padding-left: 457px;
+  padding-left: 461px;
 
   &__list {
     display: flex;
@@ -158,8 +158,8 @@
     height: 18px;
     border-radius: 50%;
     background-color: $accent;
-    top: -4px;
-    right: -3px;
+    top: -3px;
+    right: -17px;
     font-size: 12px;
     color: #fff;
     text-align: center;
@@ -203,7 +203,7 @@
 
   &__subtitle {
     color: $accent;
-    font-size: 66px;
+    font-size: 63px;
     line-height: 130%;
     text-transform: uppercase;
     @extend %bold-700;
@@ -293,7 +293,7 @@
 }
 
 .product {
-  padding: 115px 0;
+  padding: 111px 0;
 
   &__items {
     display: grid;
@@ -683,7 +683,7 @@
 }
 
 .fast-delivery {
-  padding: 120px 0;
+  padding: 117px 0;
 
   &__inner {
     display: flex;
@@ -1227,13 +1227,13 @@
 
 
   &__filter-sort {
-    width: 149px;
+    width: 144px;
     height: 47px;
-    margin-right: 8px;
+    margin-right: 3px;
   }
 
   &__filter-chow {
-    width: 92px;
+    width: 84px;
     height: 47px;
   }
 }
