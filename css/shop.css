@@ -3478,7 +3478,8 @@ span {
   .shop__filter-inner {
     margin-left: 0;
   }
-  .pagination__itemm, .product-itemt {
+  .pagination__itemm,
+.product-itemt {
     display: none;
   }
   .shop__inner {
