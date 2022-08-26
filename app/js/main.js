@@ -44,9 +44,12 @@ $(function() {
     $('.menu__btn,.menu__list,.item11').toggleClass('menu__list--active')
   });
 
+// shop
   $('.menu__btn,.shop__inner,.shop-search,.filter__item,.filter-price,.filter__item filter-price,.filter__item').on('click', function () {
     $('.menu__btn,.shop__inner,.menu__list').toggleClass('shop__inner--active')
   });
+  // 
+
   
   if (window.matchMedia("(max-width: 400px)").matches) {
     $('.the__items').slick({
