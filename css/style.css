@@ -3908,7 +3908,9 @@ span {
     transition: all 0.7s;
     left: 19px;
   }
-  .menu__list, .menu__list--active {
+  .menu__list-itemm,
+.menu__list--active {
+    padding-top: 19px;
     border-top: 1px solid #EEEFF3;
   }
   .item11,
@@ -3974,9 +3976,9 @@ span {
     margin-top: 107px;
   }
   .menu__list.menu__list--active {
-    height: 72vh;
+    height: 73vh;
     right: 0px;
-    top: -62px;
+    top: -74px;
   }
   .top-about__inner {
     display: block;

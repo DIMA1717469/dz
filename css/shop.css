@@ -2876,7 +2876,7 @@ span {
 }
 
 .the {
-  padding: 0px;
+  padding: 0px 0 24px;
 }
 
 .the__title {
@@ -3047,7 +3047,9 @@ span {
     transition: all 0.7s;
     left: 19px;
   }
-  .menu__list, .menu__list--active {
+  .menu__list-itemm,
+.menu__list--active {
+    padding-top: 19px;
     border-top: 1px solid #EEEFF3;
   }
   .item11,
@@ -3113,9 +3115,9 @@ span {
     margin-top: 107px;
   }
   .menu__list.menu__list--active {
-    height: 72vh;
+    height: 73vh;
     right: 0px;
-    top: -62px;
+    top: -74px;
   }
   .top-about__inner {
     display: block;
@@ -3476,7 +3478,17 @@ span {
   .shop__filter-inner {
     margin-left: 0;
   }
-  .pagination {
+  .pagination__itemm, .product-itemt {
+    display: none;
+  }
+  .shop__inner {
+    display: flex;
+  }
+  .the__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .slick,
+.pagination {
     padding: 30px 0 40px;
   }
   .the__title {
@@ -3484,10 +3496,64 @@ span {
     text-align: center;
     margin-bottom: 40px;
   }
-  .slick-list {
-    margin-bottom: 45px;
+  div.slick-list {
+    margin-bottom: 57px;
   }
   .slick-dots {
     margin-bottom: 19px;
+  }
+  .menu__btn.shop__inner--active:hover {
+    background-color: #FAEDED;
+    border-radius: 3px;
+  }
+  .logo {
+    z-index: 99;
+  }
+  .shop__inner {
+    display: block;
+    position: absolute;
+    transform: translateY(-335%);
+    transition: all 0.7s;
+    left: 11px;
+    z-index: 1000;
+  }
+  .menu__list.menu__list--active {
+    display: none;
+  }
+  .shop__inner.shop__inner--active {
+    height: 73vh;
+    right: 0px;
+    top: -74px;
+  }
+  .shop__inner.shop__inner--active {
+    display: block;
+    position: absolute;
+    transition: all 0.7s;
+    background-color: white;
+    left: 11px;
+    z-index: 99;
+    transform: translateY(0%);
+    transition: all 0.7s;
+    width: 100%;
+    height: 100vh;
+    left: 14px;
+    top: 0px;
+    width: 100%;
+    height: auto;
+    padding-left: 6px;
+    top: 0px;
+    padding-top: 20%;
+    left: 0;
+  }
+  .shop__inner {
+    display: block;
+    position: absolute;
+    transform: translateY(-335%);
+    transition: all 0.7s;
+    left: 11px;
+    z-index: 99;
+  }
+  .item11 {
+    display: none;
   }
 }/*# sourceMappingURL=shop.css.map */
