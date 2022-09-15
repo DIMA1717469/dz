@@ -93,6 +93,33 @@ $('.filter-price__input').ionRangeSlider({
 
   $('input, select').styler();
 
+  $('[data-fancybox]').fancybox({
+    image: {
+      protect: true
+    }
+  });
+  $('.product-one__img-slider').slick({
+    dots: true,
+    arrows: true,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
+    prevArrow: '<button type="button" class="slick-prev"><img src="app/images/product-page/arrow-left.jpg" alt=""></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="app/images/product-page/arrow-right.jpg" alt=""></button>',
+  });
+
+
+
+  const myCarousel = new Carousel(document.querySelector(".carousel"), {
+    // Options
+  });
+
+  $('.slider').slick({
+    arrows: false,
+    fade: true,
+    autoplay: 3000,
+    dots: true
+  });
+
 
 
   var mixer = mixitup('.product__items');
