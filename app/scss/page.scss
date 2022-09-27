@@ -239,21 +239,24 @@
   right: 24px;
   top: 44%;
 }
+// .slick-dots{
+//   display: none !important;
+// }
+// .slick-dots .slick-active button {
+//   opacity: 17;
+//   width: 0px;
+//   height: 0px;
+//   background-color: transparent;
+// }
 
-.slick-dots .slick-active button {
-  opacity: 17;
-  width: 0px;
-  height: 0px;
-  background-color: transparent;
-}
+// .slick-dots button {
+//   background-color: transparent;
+//   opacity: 0.4;
+//   width: 0px;
+//   height: 0px;
+//   border-radius: 0%;
+// }
 
-.slick-dots button {
-  background-color: transparent;
-  opacity: 0.4;
-  width: 0px;
-  height: 0px;
-  border-radius: 0%;
-}
 
 .product-tabs {
   padding: 30px 0 102px;
